@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply py-[10px] px-4 bg-black-primary border border-white rounded-corner-left-normal mt-4 leading-none flex justify-center items-center gap-2 font-semibold transition-all hover:shadow-yellow;
+  }
+  .btn-neutral {
+    @apply bg-grey-dark border-grey-b;
+  }
+  .btn-ligth {
+    @apply bg-grey-light border-grey-b;
+  }
+  .input {
+    @apply relative w-full max-w-80;
+  }
+  .label {
+    @apply absolute top-[-13px] left-3 bg-[#202020] text-green-yellow font-semibold;
+  }
+  .input-field {
+    @apply bg-transparent border border-grey-b p-2 rounded-corner-right-normal outline-none w-full focus:border-green-yellow;
+  }
+  .footer {
+    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
+    @apply fixed bottom-0 py-10 flex items-center justify-center bg-grey-dark w-full font-semibold;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  @apply bg-gradient-to-tl from-black-primary to-grey-dark text-white font-darker-grotesque;
+}
